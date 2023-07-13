@@ -105,7 +105,7 @@ export const projectData = [
         projectName: 'DSE00',
         type: 'Full Stack',
         mainImage: DseImage0,
-        projectDescription: 'DSE00 is a blog providing useful information for middle school students to prepare for their DSE examination.',
+        projectDescription: 'A blog providing useful information for students to prepare for their public exam.',
         details: {
             url: 'https://www.dse00.com',
             screencaps: [
@@ -132,7 +132,7 @@ export const projectData = [
         projectName: 'CIMS2',
         type: 'Full Stack',
         mainImage: CimsMain,
-        projectDescription: 'Clinical Information Management System (2nd generation) is a system for doctors to manage their patients and their medical records.',
+        projectDescription: 'CIMS2 is a system for doctors to manage their patients and their medical records.',
         details: {
             screencaps: [
                 {

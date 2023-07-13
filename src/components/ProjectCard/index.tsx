@@ -51,8 +51,8 @@ export const ProjectCard: FC<props> = ({ projectName, projectDescription, type, 
                 </div>
 
                 <h3 className="text-xl font-bold">{projectName}</h3>
-                <Chip label={type} className="my-5" />
-                <p className="my-2">{projectDescription}</p>
+                <Chip label={type} className="my-5 p-2 text-lg font-light" />
+                <p className="my-2 text-lg font-light">{projectDescription}</p>
             </div>
             <Modal
                 open={open}
@@ -78,15 +78,13 @@ export const ProjectCard: FC<props> = ({ projectName, projectDescription, type, 
                                     src={ProfileImage}
                                     alt="Picture of the author"
                                     className="my-10 mr-28 md:mr-5"
-                                    width={200}
+                                    width={250}
                                 />
-                                <p className="my-2 w-96">{screencap.description}</p>
+                                <p className="my-2 w-96 text-lg">{screencap.description}</p>
                             </div>)
                     }
                     <div className="flex justify-center my-5">
                         <WebLink url={details?.url} />
-
-
                     </div>
 
                 </Box>
