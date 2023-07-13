@@ -2,10 +2,10 @@
 import { Box, Chip, Modal } from "@mui/material";
 import Image, { StaticImageData } from "next/image"
 import Link from "next/link";
-import ProfileImage from "public/raft-illustration.svg";
 import { FC, useState } from "react";
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import { style } from "./style";
+import { ImageModal } from "../ImageModal";
 
 type Screencap = {
     image: StaticImageData | string,
@@ -18,7 +18,6 @@ type props = {
     type: string,
     details: { screencaps: Screencap[], url?: string },
     mainImage: StaticImageData | string
-
 }
 
 const WebLink = ({ url }: { url?: string }) => {
@@ -36,8 +35,8 @@ const WebLink = ({ url }: { url?: string }) => {
 
 export const ProjectCard: FC<props> = ({ projectName, projectDescription, type, details, mainImage }) => {
     const [open, setOpen] = useState(false);
+    const [activeImage, setActiveImage] = useState(-1);
 
-    const handleClose = () => setOpen(false);
     return (
         <>
             <div className=" p-5 hover:bg-gray-100 rounded-2xl px-5 cursor-pointer transition" onClick={() => setOpen(true)}>
@@ -56,7 +55,7 @@ export const ProjectCard: FC<props> = ({ projectName, projectDescription, type, 
             </div>
             <Modal
                 open={open}
-                onClose={handleClose}
+                onClose={() => setOpen(false)}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
@@ -75,10 +74,17 @@ export const ProjectCard: FC<props> = ({ projectName, projectDescription, type, 
                         details.screencaps.map((screencap, index) =>
                             <div key={index} className="flex items-center">
                                 <Image
-                                    src={ProfileImage}
+                                    src={screencap.image}
                                     alt="Picture of the author"
-                                    className="my-10 mr-28 md:mr-5"
+                                    className="my-10 mr-28 md:mr-5 cursor-pointer rounded-2xl"
                                     width={250}
+                                    onClick={() => setActiveImage(index)}
+                                />
+                                <ImageModal
+                                    image={screencap.image}
+                                    activeImage={activeImage}
+                                    index={index}
+                                    setActiveImage={setActiveImage}
                                 />
                                 <p className="my-2 w-96 text-lg">{screencap.description}</p>
                             </div>)
@@ -88,7 +94,8 @@ export const ProjectCard: FC<props> = ({ projectName, projectDescription, type, 
                     </div>
 
                 </Box>
-            </Modal>
+            </Modal >
+
         </>
 
     )

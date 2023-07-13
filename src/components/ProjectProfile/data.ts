@@ -3,6 +3,17 @@ import DseImage0 from 'public/project/dse00/dse00-main.png'
 import Togl0 from 'public/project/togl/togl-main.svg'
 import CimsMain from 'public/project/cims2/cims2-main.png'
 import KdpppMain from 'public/project/kdppp/kdppp-main.png'
+import Tutor1 from 'public/project/tutor/tutor-1.png'
+import Tutor2 from 'public/project/tutor/tutor-2.png'
+import Tutor3 from 'public/project/tutor/tutor-3.png'
+import Tutor4 from 'public/project/tutor/tutor-4.png'
+import Togl1 from 'public/project/togl/togl-1.png'
+import Togl2 from 'public/project/togl/togl-2.png'
+import Togl3 from 'public/project/togl/togl-3.png'
+import Togl4 from 'public/project/togl/togl-4.png'
+import Kkppp1 from 'public/project/kdppp/kdppp-1.png'
+
+
 
 export const projectData = [
     {
@@ -14,37 +25,22 @@ export const projectData = [
             url: 'https://www.dse00.com',
             screencaps: [
                 {
-                    image: DseImage1,
-                    description: 'The jupas data system allow student to share their admission score to other students.'
+                    image: Tutor1,
+                    description: 'Registered user post their tutorial request and other user can apply for it.'
                 },
                 {
-                    image: '',
-                    description: 'The jupas data system allow student to share their admission score to other students.'
+                    image: Tutor2,
+                    description: 'Students can have deeper look on tutor\'s profile before decision is made.'
                 },
                 {
-                    image: '',
-                    description: 'The jupas data system allow student to share their admission score to other students.'
+                    image: Tutor3,
+                    description: 'Multiple search criteria and filter'
                 },
                 {
-                    image: '',
-                    description: 'The jupas data system allow student to share their admission score to other students.'
+                    image: Tutor4,
+                    description: 'Skeleton loading, responsive and user friendly design'
                 },
-                {
-                    image: '',
-                    description: 'The jupas data system allow student to share their admission score to other students.'
-                },
-                {
-                    image: '',
-                    description: 'The jupas data system allow student to share their admission score to other students.'
-                },
-                {
-                    image: '',
-                    description: 'The jupas data system allow student to share their admission score to other students.'
-                },
-                {
-                    image: '',
-                    description: 'The jupas data system allow student to share their admission score to other students.'
-                }
+
             ]
         }
     },
@@ -56,20 +52,20 @@ export const projectData = [
         details: {
             screencaps: [
                 {
-                    image: '',
+                    image: Togl1,
+                    description: 'The venue booking system for organization to hold their events.'
+                },
+                {
+                    image: Togl2,
                     description: 'The jupas data system allow student to share their admission score to other students.'
                 },
                 {
-                    image: '',
+                    image: Togl3,
                     description: 'The jupas data system allow student to share their admission score to other students.'
                 },
                 {
-                    image: '',
-                    description: 'The jupas data system allow student to share their admission score to other students.'
-                },
-                {
-                    image: '',
-                    description: 'The jupas data system allow student to share their admission score to other students.'
+                    image: Togl4,
+                    description: 'The frondend of the system is built with VueJS.'
                 }
             ]
         }
@@ -83,19 +79,19 @@ export const projectData = [
             url: 'https://kdpppweb.sampras.cn',
             screencaps: [
                 {
-                    image: '',
+                    image: Kkppp1,
+                    description: 'The K Dollar Staff administrate the K Dollar Point and users via the system.'
+                },
+                {
+                    image: Tutor1,
                     description: 'The jupas data system allow student to share their admission score to other students.'
                 },
                 {
-                    image: '',
+                    image: Tutor1,
                     description: 'The jupas data system allow student to share their admission score to other students.'
                 },
                 {
-                    image: '',
-                    description: 'The jupas data system allow student to share their admission score to other students.'
-                },
-                {
-                    image: '',
+                    image: Tutor1,
                     description: 'The jupas data system allow student to share their admission score to other students.'
                 }
             ]
@@ -110,19 +106,19 @@ export const projectData = [
             url: 'https://www.dse00.com',
             screencaps: [
                 {
-                    image: '',
+                    image: Tutor1,
                     description: 'The jupas data system allow student to share their admission score to other students.'
                 },
                 {
-                    image: '',
+                    image: Tutor1,
                     description: 'The jupas data system allow student to share their admission score to other students.'
                 },
                 {
-                    image: '',
+                    image: Tutor1,
                     description: 'The jupas data system allow student to share their admission score to other students.'
                 },
                 {
-                    image: '',
+                    image: Tutor1,
                     description: 'The jupas data system allow student to share their admission score to other students.'
                 }
             ]
@@ -136,19 +132,19 @@ export const projectData = [
         details: {
             screencaps: [
                 {
-                    image: '',
+                    image: Tutor1,
                     description: 'The jupas data system allow student to share their admission score to other students.'
                 },
                 {
-                    image: '',
+                    image: Tutor1,
                     description: 'The jupas data system allow student to share their admission score to other students.'
                 },
                 {
-                    image: '',
+                    image: Tutor1,
                     description: 'The jupas data system allow student to share their admission score to other students.'
                 },
                 {
-                    image: '',
+                    image: Tutor1,
                     description: 'The jupas data system allow student to share their admission score to other students.'
                 }
             ]
