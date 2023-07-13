@@ -1,33 +1,6 @@
-import { Grid, Stack } from "@mui/material"
+import { Stack } from "@mui/material"
 import { ProjectCard } from "@/components/ProjectCard"
-
-const projectData = [
-    {
-        projectName: 'TUTOR',
-        type: 'Full Stack',
-        projectDescription: 'TUTOR is a tutorial plateform aims to match students with tutors by free. It is a full stack project built with React, Node.js, Express.js, MongoDB, and Firebase.'
-    },
-    {
-        projectName: 'LOGL',
-        type: 'Frontend',
-        projectDescription: 'It is a government system offer organization to book venue for their events.'
-    },
-    {
-        projectName: 'K Dollar',
-        type: 'Backend',
-        projectDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl.'
-    },
-    {
-        projectName: 'DSE00',
-        type: 'Full Stack',
-        projectDescription: 'DSE00 is a blog providing useful information for middle school students to prepare for their DSE examination.'
-    },
-    {
-        projectName: 'CIMS2',
-        type: 'Full Stack',
-        projectDescription: 'Clinical Information Management System (2nd generation) is a system for doctors to manage their patients and their medical records.'
-    }
-]
+import { projectData } from "./data"
 
 export const ProjectProfile = () => {
     return (
@@ -36,13 +9,15 @@ export const ProjectProfile = () => {
                 <p className="my-5">
                     Welcome to My Profolio. This is my projects done in past 5 years. Feel free to check them out.
                 </p>
-                <div className="grid grid-cols-4 w-full gap-x-5 my-12 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+                <div className="grid grid-cols-4 w-full my-12 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
                     {
                         projectData.map((project, index) =>
                             <ProjectCard
                                 key={index}
+                                mainImage={project.mainImage}
                                 projectName={project.projectName}
                                 type={project.type}
+                                details={project.details}
                                 projectDescription={project.projectDescription} />)
                     }
                 </div>
