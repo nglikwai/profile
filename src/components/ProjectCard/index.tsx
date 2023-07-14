@@ -4,8 +4,9 @@ import Image, { StaticImageData } from "next/image"
 import Link from "next/link";
 import { FC, useState } from "react";
 import VisibilityIcon from '@mui/icons-material/Visibility';
-import { style } from "./style";
+import { modalStyle } from "./style";
 import { ImageModal } from "../ImageModal";
+import ClearIcon from '@mui/icons-material/Clear';
 
 type Screencap = {
     image: StaticImageData | string,
@@ -62,16 +63,13 @@ export const ProjectCard: FC<props> = ({ projectName, projectDescription, type, 
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-                <Box sx={style} className='px-20 md:!w-full md:px-3 relative'>
-                    <div className="flex justify-between">
-                        <WebLink url={details?.url} />
-                        <button
-                            onClick={() => setOpen(false)}
-                            className="text-gray-300 hover:text-red-300 transition">
-                            ✕
-                        </button>
-                    </div>
-
+                <Box sx={modalStyle()} className='px-20 md:!w-full md:px-3 relative'>
+                    <button
+                        onClick={() => setOpen(false)}
+                        className="text-gray-300 hover:text-red-300 transition sticky top-0 float-right ">
+                        <ClearIcon />
+                    </button>
+                    <WebLink url={details?.url} />
 
                     {
                         details.screencaps.map((screencap, index) =>

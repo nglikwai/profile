@@ -108,7 +108,14 @@ export const projectData = [
         projectDescription: 'CIMS2 is a system for doctors to manage their patients and their medical records.',
         details: {
             screencaps: [
-
+                {
+                    image: 'https://res.cloudinary.com/nglikwai/image/upload/v1689348633/project/cims2/cims-1_cgd0sv.png',
+                    description: "CIMS2 allow clinic staff to manage the patient's data"
+                },
+                {
+                    image: 'https://res.cloudinary.com/nglikwai/image/upload/v1689348633/project/cims2/cims-2_wlw7fa.png',
+                    description: 'The system manage for appointment making, health assessment, registration...'
+                }
             ]
         }
     }
