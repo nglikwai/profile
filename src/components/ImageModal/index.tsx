@@ -20,7 +20,7 @@ export const ImageModal: FC<Props> = ({ image, activeImage, index, setActiveImag
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
         >
-            <Box sx={imageModalStyle} className='px-20 md:!w-full md:px-5 relative'>
+            <Box sx={imageModalStyle} className='px-20 md:!w-full md:px-3 relative'>
                 <div className="flex justify-end">
                     <button
                         onClick={() => setActiveImage(-1)}
@@ -30,6 +30,8 @@ export const ImageModal: FC<Props> = ({ image, activeImage, index, setActiveImag
                 </div>
                 <div>
                     <Image
+                        width={'1000'}
+                        height={'1000'}
                         src={image}
                         alt="Picture of the author"
                         className="my-10 mr-28 md:mr-5 h-full rounded-2xl"

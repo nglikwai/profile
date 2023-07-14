@@ -12,7 +12,7 @@ export const Footer = () => {
             </Stack>
             <Stack className="items-center py-5">
                 <Stack style={{ maxWidth: 'var(--max-width)' }} className="w-full items-center">
-                    <div className="flex justify-between w-full">
+                    <div className="flex justify-between w-full md:px-3">
                         <div>Copyright 2023 – LIK WAI</div>
                         <FacebookIcon />
                     </div>

@@ -18,6 +18,7 @@ export const ProjectProfile = () => {
                                 projectName={project.projectName}
                                 type={project.type}
                                 details={project.details}
+                                height={project?.height}
                                 projectDescription={project.projectDescription} />)
                     }
                 </div>

@@ -16,6 +16,7 @@ type props = {
     projectName: string,
     projectDescription: string,
     type: string,
+    height?: string,
     details: { screencaps: Screencap[], url?: string },
     mainImage: StaticImageData | string
 }
@@ -33,19 +34,21 @@ const WebLink = ({ url }: { url?: string }) => {
     )
 }
 
-export const ProjectCard: FC<props> = ({ projectName, projectDescription, type, details, mainImage }) => {
+export const ProjectCard: FC<props> = ({ projectName, projectDescription, type, details, mainImage, height }) => {
     const [open, setOpen] = useState(false);
     const [activeImage, setActiveImage] = useState(-1);
 
     return (
         <>
             <div className=" p-5 hover:bg-gray-100 rounded-2xl px-5 cursor-pointer transition" onClick={() => setOpen(true)}>
-                <div className="flex justify-center h-52 items-center">
+                <div className="flex justify-center h-52 items-center ">
                     <Image
                         src={mainImage}
-                        height={130}
+                        width={200}
+                        height={400}
+                        style={height ? { width: '100%', height: 'auto' } : { width: '100px', height: 'auto' }}
                         alt="Picture of the author"
-                        className="my-10 md:w-full"
+                        className="my-10 md:h-auto"
                     />
                 </div>
 
@@ -59,7 +62,7 @@ export const ProjectCard: FC<props> = ({ projectName, projectDescription, type, 
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-                <Box sx={style} className='px-20 md:!w-full md:px-5 relative'>
+                <Box sx={style} className='px-20 md:!w-full md:px-3 relative'>
                     <div className="flex justify-between">
                         <WebLink url={details?.url} />
                         <button
@@ -72,21 +75,23 @@ export const ProjectCard: FC<props> = ({ projectName, projectDescription, type, 
 
                     {
                         details.screencaps.map((screencap, index) =>
-                            <div key={index} className="flex items-center">
+                            <div key={index} className="flex items-center md:flex-col md:border-b md:pb-5 border-gray-100">
                                 <Image
                                     src={screencap.image}
                                     alt="Picture of the author"
                                     className="my-10 mr-28 md:mr-5 cursor-pointer rounded-2xl"
                                     width={250}
+                                    height={250}
                                     onClick={() => setActiveImage(index)}
                                 />
+                                <p className="my-2 w-96 text-lg md:px-3">{screencap.description}</p>
+
                                 <ImageModal
                                     image={screencap.image}
                                     activeImage={activeImage}
                                     index={index}
                                     setActiveImage={setActiveImage}
                                 />
-                                <p className="my-2 w-96 text-lg">{screencap.description}</p>
                             </div>)
                     }
                     <div className="flex justify-center my-5">
