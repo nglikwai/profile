@@ -1,0 +1,19 @@
+{
+  "header": {
+    "contact": "Contact"
+  },
+  "main": {
+    "title": "My Profilelio Works in One Place",
+    "description": "A full stack programmer with 5 years of experience. Passionate about building a beautiful website.",
+    "learnMore": "LEARN MORE"
+  },
+  "profolio": {
+    "description": "Welcome to My Profolio. This is my projects done in past 5 years. Feel free to check them out.",
+    "visit": "Visit Web"
+  },
+  "footer": {
+    "title": "Wanna Build a Web?",
+    "copyRight": "Copyright",
+    "contactMe": "Contact Me"
+  }
+}

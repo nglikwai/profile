@@ -1,0 +1,19 @@
+{
+  "header": {
+    "contact": "聯絡方式"
+  },
+  "main": {
+    "title": "我的個人檔案",
+    "description": "5年經驗的網站開發",
+    "learnMore": "了解更多"
+  },
+  "profolio": {
+    "description": "歡迎來到我的個人檔案，以下是我這五年間完成的專案。",
+    "visit": "瀏覽網站"
+  },
+  "footer": {
+    "title": "想建立網站 ？",
+    "copyRight": "版權",
+    "contactMe": "聯絡我"
+  }
+}

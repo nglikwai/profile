@@ -1,4 +1,3 @@
-'use client'
 import { Box, Chip, Modal } from "@mui/material";
 import Image, { StaticImageData } from "next/image"
 import Link from "next/link";
@@ -7,6 +6,8 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import { modalStyle } from "./style";
 import { ImageModal } from "../ImageModal";
 import ClearIcon from '@mui/icons-material/Clear';
+import { useTranslation } from "@/app/i18n/client";
+import { useApp } from "@/context/app";
 
 type Screencap = {
     image: StaticImageData | string,
@@ -23,10 +24,14 @@ type props = {
 }
 
 const WebLink = ({ url }: { url?: string }) => {
+
+    const { lng } = useApp()
+    const { t } = useTranslation(lng)
+
     return (
         url ?
             <Link href={url} target="_blank" className="w-36 flex items-center text-white rounded-lg px-4 py-2 active:scale-95 " style={{ background: 'var(--primary-color)' }}>
-                <VisibilityIcon sx={{ marginRight: '4px' }} />Visit Web
+                <VisibilityIcon sx={{ marginRight: '4px' }} />{t('profolio.visit')}
             </Link> :
             <button className="flex items-center text-white rounded-lg px-4 py-2 active:scale-95 bg-gray-200 cursor-not-allowed">
                 Internal

@@ -1,21 +1,22 @@
 "use client"
-import { useContext, useRef, RefObject, createContext } from 'react'
+import { useParams } from 'next/navigation';
+import { useContext, useRef, RefObject, createContext, useState, useEffect } from 'react'
 
 type AppContextType = {
   projectRef?: RefObject<HTMLDivElement>;
   contactRef?: RefObject<HTMLDivElement>;
-  scrollToProjectRef: () => void
-  scrollToContactRef: () => void
+  lng?: string;
+  scrollToProjectRef?: () => void
+  scrollToContactRef?: () => void
 }
 
-const AppContext = createContext<AppContextType>({
-  scrollToProjectRef: () => { },
-  scrollToContactRef: () => { },
-})
-
+const AppContext = createContext<AppContextType>({})
 export const useApp = () => useContext(AppContext)
 
 const AppProvider = ({ children }: { children: React.ReactNode }) => {
+
+  const params = useParams()
+  const lng = params.lng
 
   const projectRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
@@ -27,7 +28,7 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <>
-      <AppContext.Provider value={{ projectRef, contactRef, scrollToProjectRef, scrollToContactRef }}>{children}</AppContext.Provider>
+      <AppContext.Provider value={{ lng, projectRef, contactRef, scrollToProjectRef, scrollToContactRef }}>{children}</AppContext.Provider>
     </>
   )
 }

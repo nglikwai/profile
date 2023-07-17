@@ -10,6 +10,7 @@ type Props = {
 }
 
 export const PageWrapper: FC<Props> = ({ children }) => {
+
     return (
         <Stack className="w-full items-center pt-8">
             <Stack className="items-center">

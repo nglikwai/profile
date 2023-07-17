@@ -5,6 +5,7 @@ import { FC, useState } from "react";
 import { modalStyle } from "@/components/ProjectCard/style";
 import Image from "next/image";
 import { useApp } from "@/context/app";
+import { useTranslation } from "@/app/i18n/client";
 
 
 type props = {
@@ -29,20 +30,23 @@ const ContactModal: FC<props> = ({ open, setOpen }) => {
 }
 
 export const Footer = () => {
+
     const [open, setOpen] = useState(false);
-    const { contactRef } = useApp()
+    const { contactRef, lng } = useApp()
+    const { t } = useTranslation(lng)
+
     return (
         <footer className="w-screen" ref={contactRef}>
             <Stack className="bg-primary items-center text-white py-12">
                 <Stack style={{ maxWidth: 'var(--max-width)' }} className="w-full items-center">
-                    <h1 className="text-4xl font-bold my-5">Wanna Build a Web?</h1>
-                    <button onClick={() => setOpen(true)} className="border-white px-5 py-2 border-2 my-5 text-lg rounded-xl">Contact Me</button>
+                    <h1 className="text-4xl font-bold my-5">{t('footer.title')}</h1>
+                    <button onClick={() => setOpen(true)} className="border-white px-5 py-2 border-2 my-5 text-lg rounded-xl">{t('footer.contactMe')}</button>
                 </Stack>
             </Stack>
             <Stack className="items-center py-5">
                 <Stack style={{ maxWidth: 'var(--max-width)' }} className="w-full items-center">
                     <div className="flex justify-between w-full md:px-3">
-                        <div>Copyright 2023 – LIK WAI</div>
+                        <div>{t('footer.copyRight')} 2023 – LIK WAI</div>
                         <Link href="https://www.facebook.com/nglikwai/" target="_blank"><FacebookIcon /></Link>
                     </div>
                 </Stack>
