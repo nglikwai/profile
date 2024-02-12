@@ -4,7 +4,7 @@
   },
   "main": {
     "title": "我的個人檔案",
-    "description": "5年經驗的網站開發",
+    "description": "4年經驗的網站開發",
     "learnMore": "了解更多"
   },
   "profolio": {
@@ -14,6 +14,8 @@
   "footer": {
     "title": "想建立網站 ？",
     "copyRight": "版權",
-    "contactMe": "聯絡我"
+    "contactMe": "聯絡我",
+    "sentences-1": "每個項目都是獨一無二的，我樂於應對各種技術堆棧帶來的多樣挑戰。憑藉在眾多項目上的豐富經驗，我擁有無價的洞察力，了解什麼能有效地解決問題。",
+    "sentences-2": "然而，我不滿足於現狀；我不斷質疑並重新評估我們的方法論。通過探索 HTML、CSS、JavaScript、Vue.js、React、Next.js 和 Nest.js 等新興工具和框架，我保持在創新的前沿。"
   }
 }

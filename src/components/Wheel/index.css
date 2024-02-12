@@ -1,0 +1,32 @@
+.wheel {
+  position: relative;
+  width: 10; /* Set the width and height of the wheel container */
+  height: 100px;
+  border-radius: 50%; /* Make it round */
+  animation: rotate-wheel 20s infinite linear; /* Adjust duration and timing function as needed */
+}
+
+.section-container {
+  position: absolute;
+  top: 50%; /* Position the containers at the center vertically */
+  left: 50%; /* Position the containers at the center horizontally */
+  transform-origin: center bottom;
+}
+
+.section-number {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-100%) translateY(-200%) rotate(90deg); /* Rotate the number to point upward */
+}
+
+
+
+@keyframes rotate-wheel {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

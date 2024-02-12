@@ -3,17 +3,19 @@
     "contact": "Contact"
   },
   "main": {
-    "title": "My Profilelio Works in One Place",
-    "description": "A full stack programmer with 5 years of experience. Passionate about building a beautiful website.",
+    "title": "My Porfolio Works in One Place",
+    "description": "A full stack programmer with 4 years of experience. Passionate about building beautiful websites",
     "learnMore": "LEARN MORE"
   },
   "profolio": {
-    "description": "Welcome to My Profolio. This is my projects done in past 5 years. Feel free to check them out.",
+    "description": "Welcome to My Profolio. This is my projects done in past 4 years. Feel free to check them out.",
     "visit": "Visit Web"
   },
   "footer": {
-    "title": "Wanna Build a Web?",
+    "title": "Technologies",
     "copyRight": "Copyright",
-    "contactMe": "Contact Me"
+    "contactMe": "Contact Me",
+    "sentences-1": "Every project is unique, and I thrive on the diversity of challenges presented by various technology stacks. With extensive experience across a spectrum of projects, I possess invaluable insights into what works effectively.",
+    "sentences-2": "However, I don't settle for the status quo; I continually question and reassess our methodologies. By exploring emerging tools and frameworks such as HTML, CSS, JavaScript, Vue.js, React, Next.js, and Nest.js, I stay at the forefront of innovation."
   }
 }

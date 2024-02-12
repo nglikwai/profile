@@ -1,0 +1,27 @@
+.vapour-span {
+  animation: animate 10s linear infinite;
+  animation-delay: calc(var(--i) * -0.5s);
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(-250px) scaleX(5);
+  }
+
+  95% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) scaleX(10);
+  }
+}

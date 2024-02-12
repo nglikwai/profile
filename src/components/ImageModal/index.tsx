@@ -12,7 +12,6 @@ type Props = {
 }
 
 export const ImageModal: FC<Props> = ({ image, activeImage, index, setActiveImage }) => {
-    console.log(activeImage, index)
     return (
         <Modal
             open={activeImage === index}
