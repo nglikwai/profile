@@ -19,7 +19,7 @@ const Home = () => {
         <Main style={{ transform: "translateZ(-10px) scale(2)" }} />
 
         <div
-          className="w-full pb-[850px] sm:pb-[0px] sm:!translate-y-[900]"
+          className="w-full pb-[850px] sm:pb-[0px] sm:!translate-y-[900] profile-wrapper"
           style={{
             transform: "translateZ(-5px) scale(1.5) translateY(900px)",
           }}

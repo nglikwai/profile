@@ -2,14 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
   --background-color: #1d1f25;
   --foreground-rgb: #f7f7f6;
   /* --foreground-rgb: #ebe8e6; */
   --max-width: 1200px;
   --primary-color: #c26148;
-
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -27,4 +25,8 @@ body {
 
 .bg-primary {
   background-color: var(--primary-color);
+}
+
+.safari .profile-wrapper {
+  padding-bottom: 0;
 }
