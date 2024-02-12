@@ -34,7 +34,6 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
   const scrollToContactRef = scrollToRef(contactRef);
 
   useEffect(() => {
-    console.log(navigator)
     if (
       navigator.userAgent.indexOf("Safari") != -1 &&
       navigator.userAgent.indexOf("Chrome") == -1

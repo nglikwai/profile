@@ -27,6 +27,10 @@ body {
   background-color: var(--primary-color);
 }
 
+.profile-wrapper {
+  padding-bottom: calc(var(--i)*0.35px);
+}
+
 .safari .profile-wrapper {
   padding-bottom: 0;
 }
