@@ -19,19 +19,19 @@ export const ProjectProfile = (props: any) => {
     <Stack
       alignItems="center"
       style={{ background: "#ebe8e6" }}
-      className="w-full py-10 rounded-t-[10%] drop-shadow-[0_-20px_10px_#dddddd77]"
+      className="w-full py-10 sm:py-0 rounded-[7%] md:rounded-[5%] sm:rounded-none "
       ref={projectRef}
       {...props}
     >
       <Stack
         alignItems="center"
-        className="w-full xl:px-5"
+        className="w-full xl:px-5 sm:px-3"
         style={{ background: "#ebe8e6", maxWidth: "var(--max-width)" }}
       >
         <p className="my-5 mt-20 text-2xl md:text-lg md:w-full tracking-wide w-1/2 text-center leading-[50px]">
           {t("profolio.description")}
         </p>
-        <div className="grid grid-cols-4 w-full my-12 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
+        <div className="grid grid-cols-4 w-full my-12 xl:grid-cols-3 md:grid-cols-2 gap-4">
           {projectData[lng as keyof DataObject].map((project, index) => (
             <ProjectCard
               key={index}

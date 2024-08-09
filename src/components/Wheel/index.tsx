@@ -15,7 +15,7 @@ const skills = [
 ];
 const Wheel = () => {
   return (
-    <div className="wheel">
+    <div className="wheel sm:hidden">
       {skills.map((link, index) => (
         <div
           key={index}
@@ -24,8 +24,8 @@ const Wheel = () => {
             transform: `rotate(${index * (360 / numberOfSections)}deg)`,
           }}
         >
-          <div className="section-number w-[200px] xl:w-[150px] md:w-[100px] sm:w-[90px]">
-            <Image src={link} alt="whatsapp" width={200} height={200} />
+          <div className="section-number w-[120px] xl:w-[100px] md:w-[80px] sm:w-[70px]">
+            <Image src={link} alt="whatsapp" width={200} height={200} priority/>
           </div>
         </div>
       ))}

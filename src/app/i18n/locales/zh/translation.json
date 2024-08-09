@@ -4,11 +4,11 @@
   },
   "main": {
     "title": "我的個人檔案",
-    "description": "4年經驗的網站開發",
+    "description": "5年經驗的網站開發",
     "learnMore": "了解更多"
   },
   "profolio": {
-    "description": "歡迎來到我的個人檔案，以下是我這五年間完成的專案。",
+    "description": "歡迎來到我的個人檔案，以下是我這四年間完成的專案。",
     "visit": "瀏覽網站"
   },
   "footer": {

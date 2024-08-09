@@ -8,7 +8,7 @@ type props = {
 const UnderlineButton: FC<props> = ({ callback, title }) => {
   return (
     <button
-      className="group hover:text-[var(--primary-color)] flex flex-col items-center tracking-wide"
+      className="group hover:text-[var(--primary-color)] flex flex-col items-center tracking-wide sm:text-sm"
       onClick={callback}
     >
       {title}

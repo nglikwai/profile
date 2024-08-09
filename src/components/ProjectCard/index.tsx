@@ -60,7 +60,7 @@ export const ProjectCard: FC<props> = ({
   return (
     <div {...props}>
       <div
-        className="group p-5 hover:bg-[rgba(243,244,246,1)] rounded-2xl px-5 cursor-pointer duration-300 active:scale-95 hover:scale-110 hover:drop-shadow-[0_0_20px_white] transition-all"
+        className="group p-5 sm:p-0 hover:bg-[rgba(243,244,246,1)] rounded-2xl px-5 cursor-pointer duration-300 active:scale-[0.98] hover:drop-shadow-[0_0_10px_white] transition-all"
         onClick={() => setOpen(true)}
       >
         <div className="flex justify-center h-52 items-center ">
@@ -78,12 +78,16 @@ export const ProjectCard: FC<props> = ({
           />
         </div>
 
-        <h3 className="text-xl font-black tracking-wide">{projectName}</h3>
+        <h3 className="text-xl sm:text-lg font-black sm:font-bold tracking-wide sm:text-center">
+          {projectName}
+        </h3>
         <Chip
           label={type}
-          className="my-5 p-2 text-lg font-light tracking-wider shadow"
+          className="my-5 p-2 sm:hidden text-lg sm:text-sm font-light tracking-wider shadow"
         />
-        <p className="my-2 text-lg font-light">{projectDescription}</p>
+        <p className="my-2 text-lg sm:hidden font-light">
+          {projectDescription}
+        </p>
       </div>
       <Modal
         open={open}
@@ -100,6 +104,10 @@ export const ProjectCard: FC<props> = ({
           </button>
           <WebLink url={details?.url} />
 
+          <p className="my-2 hidden sm:block pt-10 font-light">
+            {projectDescription}
+          </p>
+
           {details.screencaps.map((screencap, index) => (
             <div
               key={index}
@@ -113,7 +121,7 @@ export const ProjectCard: FC<props> = ({
                 height={250}
                 onClick={() => setActiveImage(index)}
               />
-              <p className="my-2 w-96 text-lg md:px-3">
+              <p className="my-2 w-96 text-lg sm:text-base md:px-3 sm:font-light">
                 {screencap.description}
               </p>
 

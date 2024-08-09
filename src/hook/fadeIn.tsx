@@ -29,7 +29,7 @@ export const useFadeIn = () => {
     props: {
       ref,
       className: `transition-opacity`,
-      style: { transition: "all 2s", opacity: isVisible ? 1 : 0, transform: isVisible ? "translateY(0)" : "translateY(40px)"},
+      style: { transition: "all 1.5s", opacity: isVisible ? 1 : 0, transform: isVisible ? "translateY(0)" : "translateY(40px)"},
     },
   };
 };

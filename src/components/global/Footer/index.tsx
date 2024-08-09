@@ -54,16 +54,16 @@ export const Footer = () => {
   const { props, isVisible } = useFadeIn();
 
   return (
-    <footer className="w-screen bg-gradient-to-b from-[#ebe8e6] to-white relative">
+    <footer className="w-screen relative h-full flex flex-col justify-between">
       <Stack
         direction="row"
-        className="w-full justify-center group drop-shadow-[0_0_10px_#ccc] bg-primary items-center text-white py-40 rounded-[20%] md:rounded-[10%] lg:rounded-[15%] transition duration-500 h-[1000px] md:h-auto md:py-14"
+        className="w-full justify-center group bg-primary  items-center text-white py-10 rounded-tl-[7%] md:rounded-[5%] sm:rounded-none  lg:rounded-[15%] transition duration-500 h-[90vh] md:pt-5"
       >
         <div className="max-w-[var(--max-width)] flex justify-between w-full xl:px-10">
           <Stack className="w-[700px] flex z-10 max-w-[var(--max-width)]">
             <div {...props} className="">
               <h1 className="text-4xl font-bold my-10">{t("footer.title")}</h1>
-              <article className="md:w-full leading-8 [&>p]:my-8 text-xl sm:text-lg sm:leading-2">
+              <article className="md:w-full leading-8 [&>p]:my-8 text-xl sm:text-lg sm:leading-2 sm:font-light">
                 <p>{t("footer.sentences-1")}</p>
                 <p>{t("footer.sentences-2")}</p>
               </article>
@@ -72,7 +72,7 @@ export const Footer = () => {
             <div {...props}>
               <button
                 onClick={() => setOpen(true)}
-                className="border-white px-7 py-4 border-4 mt-10 text-lg rounded-3xl group-hover:animate-bounce font-bold tracking-widest uppercase shadow-xl drop-shadow-[0_0_10px_white] hover:drop-shadow-[0_0_20px_white] transition-all"
+                className="border-white px-7 py-4 border-4 mt-10 text-lg rounded-3xl  font-bold tracking-widest uppercase shadow-xl drop-shadow-[0_0_10px_white] hover:drop-shadow-[0_0_20px_white] transition-all"
               >
                 {t("footer.contactMe")}
               </button>

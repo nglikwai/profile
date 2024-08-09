@@ -17,7 +17,7 @@ export const Main = (prop: any) => {
       <TitleRolling />
       <div {...props}>
         <p
-          className="text-2xl leading-10 my-7 md:!w-full md:text-xl sm:text-lg tracking-wide"
+          className="text-2xl leading-10 my-7 md:!w-full md:text-xl sm:text-lg tracking-wide sm:font-light"
           style={{ width: "700px", textAlign: "center" }}
         >
           {t("main.description")}
