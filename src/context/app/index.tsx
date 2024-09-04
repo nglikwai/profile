@@ -15,9 +15,14 @@ type AppContextType = {
   lng?: string;
   scrollToProjectRef?: () => void;
   scrollToContactRef?: () => void;
+  contactOpen: boolean;
+  setContactOpen: (open: boolean) => void;
 };
 
-const AppContext = createContext<AppContextType>({});
+const AppContext = createContext<AppContextType>({
+  contactOpen: false,
+  setContactOpen: () => {},
+});
 export const useApp = () => useContext(AppContext);
 
 const AppProvider = ({ children }: { children: React.ReactNode }) => {
@@ -26,6 +31,7 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
 
   const projectRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
+  const [contactOpen, setContactOpen] = useState(false);
 
   const scrollToRef = (ref: RefObject<HTMLDivElement>) => () =>
     ref?.current?.scrollIntoView({ behavior: "smooth" });
@@ -51,6 +57,8 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
           contactRef,
           scrollToProjectRef,
           scrollToContactRef,
+          contactOpen,
+          setContactOpen,
         }}
       >
         {children}

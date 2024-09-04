@@ -10,6 +10,8 @@ export const useScreen = () => {
       setScreenWidth(window.innerWidth); // Check if window is available
     };
 
+    handleResize();
+
     // Check if window is available before adding event listener
     if (typeof window !== "undefined") {
       window.addEventListener("resize", handleResize);

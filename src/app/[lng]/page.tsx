@@ -65,6 +65,9 @@ const Home = () => {
           <ParallaxLayer offset={2} speed={1}>
             <Footer />
           </ParallaxLayer>
+          <ParallaxLayer offset={2} speed={1}>
+            <Footer />
+          </ParallaxLayer>
         </Parallax>
       </Stack>
     </Stack>

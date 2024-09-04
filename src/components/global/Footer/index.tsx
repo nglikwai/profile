@@ -9,6 +9,7 @@ import { useTranslation } from "@/app/i18n/client";
 import { useFadeIn } from "@/hook";
 import Wheel from "@/components/Wheel";
 import Copyright from "@/components/Copyright";
+import Wave from "@/components/Wave";
 
 type props = {
   open: boolean;
@@ -48,47 +49,56 @@ const ContactModal: FC<props> = ({ open, setOpen }) => {
 };
 
 export const Footer = () => {
-  const [open, setOpen] = useState(false);
-  const { contactRef, lng } = useApp();
+  const { contactRef, lng, contactOpen, setContactOpen } = useApp();
   const { t } = useTranslation(lng);
   const { props, isVisible } = useFadeIn();
 
   return (
-    <footer className="w-screen relative h-full flex flex-col justify-between">
-      <Stack
-        direction="row"
-        className="w-full justify-center group bg-primary  items-center text-white py-10 rounded-tl-[7%] md:rounded-[5%] sm:rounded-none  lg:rounded-[15%] transition duration-500 h-[90vh] md:pt-5"
-      >
-        <div className="max-w-[var(--max-width)] flex justify-between w-full xl:px-10">
-          <Stack className="w-[700px] flex z-10 max-w-[var(--max-width)]">
-            <div {...props} className="">
-              <h1 className="text-4xl font-bold my-10">{t("footer.title")}</h1>
-              <article className="md:w-full leading-8 [&>p]:my-8 text-xl sm:text-lg sm:leading-2 sm:font-light">
-                <p>{t("footer.sentences-1")}</p>
-                <p>{t("footer.sentences-2")}</p>
-              </article>
-            </div>
-
-            <div {...props}>
-              <button
-                onClick={() => setOpen(true)}
-                className="border-white px-7 py-4 border-4 mt-10 text-lg rounded-3xl  font-bold tracking-widest uppercase shadow-xl drop-shadow-[0_0_10px_white] hover:drop-shadow-[0_0_20px_white] transition-all"
-              >
-                {t("footer.contactMe")}
-              </button>
-            </div>
-          </Stack>
-
-          <div className="absolute z-0 top-[40%] right-0">
-            <Wheel />
-          </div>
+    <footer className="w-screen relative h-full flex flex-col mt-20">
+      <div>
+        <div className="transform scale-y-[-1]">
+          <Wave color="#c26148" />
         </div>
-      </Stack>
+        <Stack
+          direction="row"
+          className="w-full justify-center group bg-primary items-center text-white sm:rounded-none h-[70vh] sm:h-[85vh] md:pt-5"
+        >
+          <div className="max-w-[var(--max-width)] flex justify-between w-full xl:px-10">
+            <Stack className="w-[700px] flex z-10 max-w-[var(--max-width)]">
+              <div {...props} className="">
+                <h1 className="text-4xl font-bold my-10">
+                  {t("footer.title")}
+                </h1>
+                <article className="md:w-full leading-8 [&>p]:my-8 text-xl sm:text-lg sm:leading-2 sm:font-light">
+                  <p>{t("footer.sentences-1")}</p>
+                  <p>{t("footer.sentences-2")}</p>
+                </article>
+              </div>
+
+              <div {...props}>
+                <button
+                  onClick={() => setContactOpen?.(true)}
+                  className="border-white px-7 sm:px-4 py-4 sm:py-3 border-4 mt-10 sm:mt-2 text-lg sm:text-sm rounded-3xl sm:rounded-2xl font-bold tracking-widest uppercase shadow-xl drop-shadow-[0_0_10px_white] hover:drop-shadow-[0_0_20px_white] transition-all"
+                >
+                  {t("footer.contactMe")}
+                </button>
+              </div>
+            </Stack>
+
+            <div className="absolute z-10 top-[40%] right-0">
+              <Wheel />
+            </div>
+          </div>
+        </Stack>
+        <div className="h-28 mt-[-1px]">
+          <Wave color="#c26148" />
+        </div>
+      </div>
+
       <div ref={contactRef}>
         <Copyright />
       </div>
-
-      <ContactModal open={open} setOpen={setOpen} />
+      <ContactModal open={contactOpen} setOpen={setContactOpen} />
     </footer>
   );
 };

@@ -28,7 +28,7 @@ body {
 }
 
 .profile-wrapper {
-  padding-bottom: calc(var(--i)*0.35px);
+  padding-bottom: calc(var(--i) * 0.35px);
 }
 
 .safari .profile-wrapper {
