@@ -20,14 +20,14 @@ export function GET() {
           weight_kg: 70,
           height_cm: 175,
           target_weight_kg: 65,
-          time_frame_days: 30,
+          time_frame_days: 40,
         },
       },
       output: {
         type: "string",
         description: "Output response",
         example:
-          "Based on your inputs, aim for approximately 2000 calories per day to reach your target weight of 65 kg in 30 days.",
+          "Based on your inputs, aim for approximately 1016 calories per day to reach your target weight of 65 kg in 30 days.",
       },
     }),
     {
@@ -46,7 +46,7 @@ export function GET() {
 
 export async function POST(request: Request) {
   const data = await request.json();
-  const { weight_kg, height_cm, target_weight_kg, time_frame_days } = data;
+  const { weight_kg, height_cm, target_weight_kg, time_frame_days } = data.input;
 
   if (!weight_kg || !height_cm || !target_weight_kg || !time_frame_days) {
     return new Response(

@@ -8,8 +8,22 @@ POST http://localhost:3000/api/func HTTP/1.1
 Content-Type: application/json
 
 {
-"weight_kg":90, 
-"height_cm":183, 
-"target_weight_kg":70, 
-"time_frame_days":90
+    "input": {
+        "weight_kg":90, 
+        "height_cm":183, 
+        "target_weight_kg":70, 
+        "time_frame_days":90
+    }
+}
+
+
+### Get BMR
+
+
+POST https://api.func.live/functions HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJQOWtLVDlTWmVaUDNvUk4wOXl0bEx6TzBXT2kxIiwibWljcm9zZXJ2aWNlcyI6WyJ3YWtlZmxvdy1lbWFpbHMiLCJ3YWtlZmxvdy10aW1lciIsIndha2VmbG93LTJmYSIsIndha2VmbG93LXBheW1lbnRzIiwid2FrZWZsb3ctdHdpbGlvIiwid2FrZWZsb3ctbnVtYmVyNCJdLCJpYXQiOjE3Mzc0MTg5NzksImV4cCI6MTc2ODk1NDk3OX0.YBcADshzJ_St1lq3ucxa41YmbisrovGghR0jOPcqyoA
+
+{
+    "url": "https://nglikwai.com/api/func"
 }
