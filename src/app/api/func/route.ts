@@ -51,6 +51,7 @@ export async function POST(request: Request) {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",
           "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+          "Allowed-Headers": "Content-Type",
         },
       },
     );
@@ -83,6 +84,9 @@ export async function POST(request: Request) {
         status: 200,
         headers: {
           "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+          "Allowed-Headers": "Content-Type",
         },
       },
     );
@@ -97,6 +101,9 @@ export async function POST(request: Request) {
       status: 200,
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+        "Allowed-Headers": "Content-Type",
       },
     },
   );
@@ -108,6 +115,7 @@ export async function OPTIONS() {
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+      "Allowed-Headers": "Content-Type",
     },
   });
 }
