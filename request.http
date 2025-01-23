@@ -6,12 +6,10 @@ GET http://localhost:3000/api/func
 
 POST http://localhost:3000/api/func HTTP/1.1
 Content-Type: application/json
+
 {
-  "name": "John",
-  "age": 30,
-  "weight": 70,
-  "height": 1.75
+"weight_kg":90, 
+"height_cm":183, 
+"target_weight_kg":70, 
+"time_frame_days":90
 }
-
-
-### Get BMI

@@ -1,26 +1,37 @@
 export const dynamic = "force-static";
 
-export async function GET() {
-  return Response.json({
-    name: "Achieve your target weight",
-    description: "Calculate daily calorie intake to reach your target weight.",
-    input: {
-      type: "object",
-      description: "Input parameters",
-      example: {
-        weight_kg: 70,
-        height_cm: 175,
-        target_weight_kg: 65,
-        time_frame_days: 30,
+export function GET() {
+  return new Response(
+    JSON.stringify({
+      name: "Achieve your target weight",
+      description:
+        "Calculate daily calorie intake to reach your target weight.",
+      input: {
+        type: "object",
+        description: "Input parameters",
+        example: {
+          weight_kg: 70,
+          height_cm: 175,
+          target_weight_kg: 65,
+          time_frame_days: 30,
+        },
+      },
+      output: {
+        type: "string",
+        description: "Output response",
+        example:
+          "Based on your inputs, aim for approximately 2000 calories per day to reach your target weight of 65 kg in 30 days.",
+      },
+    }),
+    {
+      status: 200,
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
       },
     },
-    output: {
-      type: "string",
-      description: "Output response",
-      example:
-        "Based on your inputs, aim for approximately 2000 calories per day to reach your target weight of 65 kg in 30 days.",
-    },
-  });
+  );
 }
 
 // app/routes/api/energy-intake.ts
@@ -33,13 +44,13 @@ export async function POST(request: Request) {
   // Basic validation
   if (!weight_kg || !height_cm || !target_weight_kg || !time_frame_days) {
     return new Response(
-      JSON.stringify(
-        "Please provide weight, height, target weight, and time frame.",
-      ),
+      "Please provide weight, height, target weight, and time frame.",
       {
         status: 400,
         headers: {
           "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
         },
       },
     );
