@@ -10,7 +10,7 @@ const headers = {
 export function GET() {
   return new Response(
     JSON.stringify({
-      name: "TargetWeightCaloriesCalculator",
+      name: "targetWeightCaloriesCalculator",
       description:
         "Calculate daily calorie intake to reach your target weight.",
       input: {
