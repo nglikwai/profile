@@ -51,7 +51,7 @@ export async function POST(request: Request) {
   if (!weight_kg || !height_cm || !target_weight_kg || !time_frame_days) {
     return new Response(
       JSON.stringify({
-        error: "Please provide weight, height, target weight, and time frame.",
+        output: "Please provide weight, height, target weight, and time frame.",
       }),
       {
         status: 400,
@@ -74,7 +74,7 @@ export async function POST(request: Request) {
   if (dailyCalories < 300) {
     return new Response(
       JSON.stringify({
-        message:
+        output:
           "The target is unrealistic. Excessive weight loss is not healthy. Please adjust your target weight or time frame.",
       }),
       {
@@ -86,7 +86,7 @@ export async function POST(request: Request) {
 
   return new Response(
     JSON.stringify({
-      message: `Based on your inputs, aim for approximately ${dailyCalories.toFixed(
+      output: `Based on your inputs, aim for approximately ${dailyCalories.toFixed(
         0,
       )} calories per day to reach your target weight of ${target_weight_kg} kg in ${time_frame_days} days.`,
     }),
