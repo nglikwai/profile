@@ -9,19 +9,12 @@ import ClearIcon from "@mui/icons-material/Clear";
 import { useTranslation } from "@/app/i18n/client";
 import { useApp } from "@/context/app";
 import { useFadeIn } from "@/hook";
+import classNames from "classnames";
+import { ProjectDataType } from "../ProjectProfile/data";
 
 type Screencap = {
   image: StaticImageData | string;
   description: string;
-};
-
-type props = {
-  projectName: string;
-  projectDescription: string;
-  type: string;
-  height?: string;
-  details: { screencaps: Screencap[]; url?: string };
-  mainImage: StaticImageData | string;
 };
 
 const WebLink = ({ url }: { url?: string }) => {
@@ -45,13 +38,14 @@ const WebLink = ({ url }: { url?: string }) => {
   );
 };
 
-export const ProjectCard: FC<props> = ({
+export const ProjectCard: FC<ProjectDataType> = ({
   projectName,
   projectDescription,
   type,
   details,
   mainImage,
   height,
+  isCircleIcon,
 }) => {
   const [open, setOpen] = useState(false);
   const [activeImage, setActiveImage] = useState(-1);
@@ -74,7 +68,12 @@ export const ProjectCard: FC<props> = ({
                 : { width: "100px", height: "auto" }
             }
             alt="Picture of the author"
-            className="my-10 md:h-auto group-hover:animate-bounce"
+            className={classNames(
+              "my-10 md:h-auto group-hover:animate-bounce",
+              {
+                "rounded-full": isCircleIcon,
+              },
+            )}
           />
         </div>
 

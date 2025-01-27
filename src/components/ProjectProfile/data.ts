@@ -3,6 +3,8 @@ import TMA1 from "public/images/tma1.svg";
 import TMA2 from "public/images/tma2.svg";
 import TMA3 from "public/images/tma3.svg";
 
+export type ProjectDataType = (typeof projectData.en)[2];
+
 export const projectData = {
   en: [
     {
@@ -30,6 +32,40 @@ export const projectData = {
             image: TMA3,
             description:
               "Home Page of the TMA website, with the latest news and event",
+          },
+        ],
+      },
+    },
+    {
+      projectName: "DSE00 exam",
+      type: "Full Stack",
+      mainImage: "/images/projects/dse00-exam/icon.png",
+      isCircleIcon: true,
+      projectDescription:
+        "An question bank for student to prepare public exam.",
+
+      details: {
+        url: "https://exam.dse00.com",
+        screencaps: [
+          {
+            image: "/images/projects/dse00-exam/1.png",
+            description:
+              "This is a free service for students to manage their study and reviewion progress.",
+          },
+          {
+            image: "/images/projects/dse00-exam/2.png",
+            description:
+              "The app provide exam materials with different topic and difficulty.",
+          },
+          {
+            image: "/images/projects/dse00-exam/3.png",
+            description:
+              "It allows the submission and discussion of the answer.",
+          },
+          {
+            image: "/images/projects/dse00-exam/4.png",
+            description:
+              "Admin can monitor the usage of the app in a customer CMS system.",
           },
         ],
       },
@@ -167,42 +203,6 @@ export const projectData = {
       },
     },
     {
-      projectName: "DSE00",
-      type: "Full Stack",
-      mainImage:
-        "https://res.cloudinary.com/nglikwai/image/upload/v1689335184/project/dse00/dse00-main_hqnhuh.png",
-      projectDescription:
-        "A blog providing useful information for students to prepare for their public exam.",
-      details: {
-        url: "https://www.dse00.com",
-        screencaps: [
-          {
-            image:
-              "https://res.cloudinary.com/nglikwai/image/upload/v1689335184/project/dse00/dse00-1_oxmfnk.png",
-            description:
-              "The jupas data system allow student to share their admission score to other students.",
-          },
-          {
-            image:
-              "https://res.cloudinary.com/nglikwai/image/upload/v1689336961/project/dse00/dse00-2_fprt0y.png",
-            description:
-              "A user interactive system make the website more funny.",
-          },
-          {
-            image:
-              "https://res.cloudinary.com/nglikwai/image/upload/v1689337032/project/dse00/dse00-3_jiky1t.png",
-            description:
-              "A data system allow user check the admission score of different university and course.",
-          },
-          {
-            image:
-              "https://res.cloudinary.com/nglikwai/image/upload/v1689337156/project/dse00/dse00-4_huvtrl.png",
-            description: "various css animation and effect.",
-          },
-        ],
-      },
-    },
-    {
       projectName: "CIMS2",
       type: "Full Stack",
       mainImage:
@@ -259,7 +259,7 @@ export const projectData = {
   zh: [
     {
       projectName: "TMA",
-      type: "Frontend",
+      type: "前端",
       mainImage: TMALogo,
       height: "130px",
 
@@ -284,8 +284,36 @@ export const projectData = {
       },
     },
     {
+      projectName: "DSE00 exam",
+      type: "前後端",
+      mainImage: "/images/projects/dse00-exam/icon.png",
+      isCircleIcon: true,
+      projectDescription: "一個供學生準備公開考試的題庫。",
+      details: {
+        url: "https://exam.dse00.com",
+        screencaps: [
+          {
+            image: "/images/projects/dse00-exam/1.png",
+            description: "這是一個供學生管理他們的學習和復習進度的免費服務。",
+          },
+          {
+            image: "/images/projects/dse00-exam/2.png",
+            description: "該應用程序提供不同主題和難度的考試材料。",
+          },
+          {
+            image: "/images/projects/dse00-exam/3.png",
+            description: "允許提交和討論答案。",
+          },
+          {
+            image: "/images/projects/dse00-exam/4.png",
+            description: "管理員可以在客戶CMS系統中監控應用程序的使用情況。",
+          },
+        ],
+      },
+    },
+    {
       projectName: "KDP eSHOP",
-      type: "Frontend",
+      type: "前端",
       mainImage:
         "https://res.cloudinary.com/nglikwai/image/upload/v1707623436/project/kdpeshop/logo_ic5m1y.svg",
       projectDescription:
@@ -402,38 +430,6 @@ export const projectData = {
               "https://res.cloudinary.com/nglikwai/image/upload/v1689335183/project/kdppp/kdppp-2_v8rrvu.png",
             description:
               "API 是使用 Laravel 構建的，並以 swagger 作為 API 文檔。",
-          },
-        ],
-      },
-    },
-    {
-      projectName: "DSE00",
-      type: "前後端",
-      mainImage:
-        "https://res.cloudinary.com/nglikwai/image/upload/v1689335184/project/dse00/dse00-main_hqnhuh.png",
-      projectDescription: "為學生準備公開考試提供有用信息的博客。",
-      details: {
-        url: "https://www.dse00.com",
-        screencaps: [
-          {
-            image:
-              "https://res.cloudinary.com/nglikwai/image/upload/v1689335184/project/dse00/dse00-1_oxmfnk.png",
-            description: "jupas 數據系統允許學生與其他學生分享他們的入學分數。",
-          },
-          {
-            image:
-              "https://res.cloudinary.com/nglikwai/image/upload/v1689336961/project/dse00/dse00-2_fprt0y.png",
-            description: "用戶交互系統使網站更加有趣。",
-          },
-          {
-            image:
-              "https://res.cloudinary.com/nglikwai/image/upload/v1689337032/project/dse00/dse00-3_jiky1t.png",
-            description: "一個數據系統，允許用戶檢查不同大學和課程的錄取分數。",
-          },
-          {
-            image:
-              "https://res.cloudinary.com/nglikwai/image/upload/v1689337156/project/dse00/dse00-4_huvtrl.png",
-            description: "各種CSS動畫和效果。",
           },
         ],
       },

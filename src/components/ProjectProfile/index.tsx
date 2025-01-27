@@ -38,15 +38,7 @@ export const ProjectProfile = (props: any) => {
           </p>
           <div className="grid grid-cols-4 w-full my-12 xl:grid-cols-3 md:grid-cols-2 gap-4">
             {projectData[lng as keyof DataObject].map((project, index) => (
-              <ProjectCard
-                key={index}
-                mainImage={project.mainImage}
-                projectName={project.projectName}
-                type={project.type}
-                details={project.details}
-                height={project?.height}
-                projectDescription={project.projectDescription}
-              />
+              <ProjectCard key={index} {...project} />
             ))}
           </div>
         </Stack>
