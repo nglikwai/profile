@@ -1,3 +1,4 @@
+import { url } from "inspector";
 import TMALogo from "public/images/tma.svg";
 import TMA1 from "public/images/tma1.svg";
 import TMA2 from "public/images/tma2.svg";
@@ -158,6 +159,7 @@ export const projectData = {
       projectDescription:
         "It is a government system offer organization to book venue for their events.",
       details: {
+        url: "https://streetcounterpass.landsd.gov.hk/",
         screencaps: [
           {
             image:
@@ -402,6 +404,7 @@ export const projectData = {
         "https://res.cloudinary.com/nglikwai/image/upload/v1689335183/project/togl/togl-main_dlgmup.svg",
       projectDescription: "這是一個政府系統提供組織為其活動預訂場地。",
       details: {
+        url: "https://streetcounterpass.landsd.gov.hk/",
         screencaps: [
           {
             image:
