@@ -12,9 +12,9 @@ const Copyright = () => {
         className="w-full items-center"
       >
         <div {...props} className="flex justify-between w-full md:px-3 ">
-          <div>© 2024 – LIK WAI</div>
+          <div>© 2025 – LIK WAI</div>
           <div className="items-center flex gap-4 font-light">
-            <span className="sm:hidden">Manchester, United Kingdom</span>
+            <span className="sm:hidden">United Kingdom</span>
             <Link href="https://www.linkedin.com/in/likwai/" target="_blank">
               <LinkedInIcon />
             </Link>

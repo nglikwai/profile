@@ -53,6 +53,10 @@ export const projectData = {
               "This is a free service for students to manage their study and reviewion progress.",
           },
           {
+            image: "/images/projects/dse00-exam/6.png",
+            description: "An AI Chatbot is provided to help student to study.",
+          },
+          {
             image: "/images/projects/dse00-exam/2.png",
             description:
               "The app provide exam materials with different topic and difficulty.",
@@ -64,6 +68,11 @@ export const projectData = {
           },
           {
             image: "/images/projects/dse00-exam/4.png",
+            description:
+              "User can manage the answer record and the progress of study.",
+          },
+          {
+            image: "/images/projects/dse00-exam/5.png",
             description:
               "Admin can monitor the usage of the app in a customer CMS system.",
           },
@@ -297,8 +306,12 @@ export const projectData = {
             description: "這是一個供學生管理他們的學習和復習進度的免費服務。",
           },
           {
+            image: "/images/projects/dse00-exam/6.png",
+            description: "提供 AI 聊天機器人幫助學生學習。",
+          },
+          {
             image: "/images/projects/dse00-exam/2.png",
-            description: "該應用程序提供不同主題和難度的考試材料。",
+            description: "應用程序提供不同主題和難度的考試材料。",
           },
           {
             image: "/images/projects/dse00-exam/3.png",
@@ -306,7 +319,11 @@ export const projectData = {
           },
           {
             image: "/images/projects/dse00-exam/4.png",
-            description: "管理員可以在客戶CMS系統中監控應用程序的使用情況。",
+            description: "用戶可以管理答案記錄和學習進度。",
+          },
+          {
+            image: "/images/projects/dse00-exam/5.png",
+            description: "管理員可以在客戶 CMS 系統中監控應用程序的使用情況。",
           },
         ],
       },
