@@ -7,7 +7,7 @@ import UnderlineButton from "../UnderlineButton";
 import MenuDrawer from "@/components/MenuDrawer";
 
 export const Header = () => {
-  const { scrollToContactRef, lng, setContactOpen } = useApp();
+  const { lng } = useApp();
   const { t } = useTranslation(lng);
   const router = useRouter();
 
@@ -30,10 +30,10 @@ export const Header = () => {
           LIK WAI
         </div>
         <div className="flex [&>*:not(:last-child)]:mr-10 text-lg sm:hidden">
-          <UnderlineButton
+          {/* <UnderlineButton
             callback={() => setContactOpen?.(true)}
             title={t("header.contact")}
-          />
+          /> */}
 
           <UnderlineButton
             callback={switchLanguage}

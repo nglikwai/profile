@@ -9,7 +9,7 @@ import Vapour from "../Vapour";
 import { useFadeIn } from "@/hook";
 
 export const Main = (prop: any) => {
-  const { scrollToProjectRef, lng } = useApp();
+  const { setContactOpen, lng } = useApp();
   const { t } = useTranslation(lng);
   const { props } = useFadeIn();
   return (
@@ -26,9 +26,9 @@ export const Main = (prop: any) => {
 
       <Button
         className="my-5 text-lg px-5 py-3 animate-bounce rounded-2xl"
-        onClick={scrollToProjectRef}
+        onClick={() => setContactOpen(true)}
       >
-        {t("main.learnMore")}
+        {t("header.contact")}
       </Button>
       <div className="relative">
         <div className="absolute bottom-[200px]">
