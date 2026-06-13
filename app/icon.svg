@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- monitor body -->
+  <rect x="1" y="1" width="28" height="20" rx="1" fill="#c0c0c0"/>
+  <!-- raised 3D border: highlight top-left, shadow bottom-right -->
+  <polyline points="1,21 1,1 29,1" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+  <polyline points="29,1 29,21 1,21" fill="none" stroke="#808080" stroke-width="1.5"/>
+
+  <!-- screen area -->
+  <rect x="4" y="4" width="22" height="14" fill="#008080"/>
+  <!-- sunken screen border -->
+  <polyline points="4,18 4,4 26,4" fill="none" stroke="#0a0a0a" stroke-width="1"/>
+  <polyline points="26,4 26,18 4,18" fill="none" stroke="#dfdfdf" stroke-width="1"/>
+
+  <!-- tiny window on-screen -->
+  <rect x="7" y="7" width="12" height="8" fill="#c0c0c0"/>
+  <rect x="7" y="7" width="12" height="3" fill="#000080"/>
+  <!-- window close box -->
+  <rect x="17" y="7" width="2" height="3" fill="#c0c0c0"/>
+  <line x1="17" y1="7" x2="19" y2="7" stroke="#808080" stroke-width="0.5"/>
+
+  <!-- green power LED -->
+  <rect x="23" y="18" width="2" height="1" fill="#00c000"/>
+
+  <!-- neck -->
+  <rect x="12" y="21" width="8" height="3" fill="#c0c0c0"/>
+  <line x1="12" y1="21" x2="20" y2="21" stroke="#ffffff" stroke-width="1"/>
+  <line x1="12" y1="24" x2="20" y2="24" stroke="#808080" stroke-width="1"/>
+
+  <!-- base -->
+  <rect x="6" y="24" width="20" height="3" rx="1" fill="#c0c0c0"/>
+  <line x1="6" y1="24" x2="26" y2="24" stroke="#ffffff" stroke-width="1"/>
+  <line x1="6" y1="27" x2="26" y2="27" stroke="#808080" stroke-width="1"/>
+</svg>
